@@ -32,9 +32,7 @@ class DrivableMap {
             this.drivable_map.put(id, thing);
             return true;
         }
-        else{
-            return false;
-        }
+        return false;
 
     }
 
@@ -65,13 +63,13 @@ class DrivableMap {
      *       drivable_map.
      */
     public List<Tradable> getTradable(){
-        List<Tradable> item = new ArrayList<Tradable>();
+        List<Tradable> Item = new ArrayList<Tradable>();
         for (Drivable i: drivable_map.values()){
             if (i instanceof Tradable){
-                item.add((Tradable) item);
+                Item.add((Tradable) i);
             }
         }
-        return item;
+        return Item;
     }
 
 
